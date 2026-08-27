@@ -8,7 +8,15 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-54ZT979N');</script>
-<!-- End Google Tag Manager --> 
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y94zg2epo3");
+</script> 
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -179,6 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     object-fit:contain;
     filter:drop-shadow(-18px 26px 28px rgba(0,0,0,.42));
   }
+  .book-wrap-mobile{display:none;}
 
   /* ============ CINEMATIC IDENTIFICATION ============ */
   .cinematic{max-width:700px; margin:0 auto; text-align:center;}
@@ -224,7 +233,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .section-head p{margin-top:12px; font-size:17px;}
   .bg-navy .section-head p{color:#AEB6C4;}
 
-  /* ============ IDENTIFICATION ============ */
+  /* ============ IDENTIFICAÇÃO ============ */
   .flow-row{
     display:flex;
     align-items:center;
@@ -487,7 +496,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     align-items:center;
   }
   .offer-tag{
-    font-size:11.5px;
+    font-size:15px;
     letter-spacing:.16em;
     text-transform:uppercase;
     color:#B5872F;
@@ -634,9 +643,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ============ RESPONSIVE ============ */
   @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr; gap:40px;}
-    .book-wrap{max-width:360px; margin:0 auto; order:2;}
-    .hero-body{order:1; text-align:center;}
+    .book-wrap{display:none;}
+    .hero-body{text-align:center;}
     .hero-body .btn-wrap.left,.hero-body .microcopy.left{justify-content:center;}
+    .book-wrap-mobile{
+      display:block;
+      max-width:300px;
+      margin:24px auto;
+    }
+    .book-wrap-mobile .product-hero{max-height:400px;}
     .belief{grid-template-columns:1fr; gap:30px;}
     .moves{grid-template-columns:1fr 1fr; gap:30px 20px;}
     .inside-grid{grid-template-columns:1fr 1fr;}
@@ -687,6 +702,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Você não precisa falar mais.</p>
       <p>Não precisa ser a pessoa mais engraçada da sala.</p>
       <p>E não precisa se tornar extrovertido.</p>
+      <div class="book-wrap-mobile">
+        <img class="product-hero" src="https://cdn.jsdelivr.net/gh/luisbr83/o-codigo-do-carisma@main/images/o-codigo-do-carisma.webp" alt="O Código do Carisma e seus materiais complementares" width="900" height="1200" loading="lazy" decoding="async">
+      </div>
       <span class="hero-highlight">Aprenda a perceber os pequenos detalhes escondidos no que alguém acabou de dizer, e descubra como usá-los para criar conversas mais naturais, interessantes e fáceis de conduzir.</span>
       <div class="btn-wrap left">
         <a class="btn" href="#oferta">Quero descobrir o Código do Carisma</a>
@@ -940,14 +958,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <span class="offer-tag">Acesso completo</span>
         <h3>O Código do Carisma</h3>
-        <ul class="offer-includes">
-          <li>O Código do Carisma</li>
+		<ul class="offer-includes">
           <li>Banco de Ganchos</li>
           <li>Mapa das Conversas</li>
         </ul>
         <div class="price">R$ 19,90</div>
-        <div class="price-note">Pagamento único.</div>
-        <div class="offer-conditions">Sem mensalidade.<br>Sem assinatura.</div>
+        
       </div>
       <div class="offer-cta">
         <a class="btn" data-checkout href="#oferta">Quero acessar o Código do Carisma</a>
@@ -1002,7 +1018,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </details>
       <details class="faq-item">
         <summary>Como recebo o acesso?</summary>
-        <div class="a">Após a confirmação do pagamento, o acesso é disponibilizado conforme as instruções da compra.</div>
+        <div class="a">Após a confirmação do pagamento, você receberá um e-mail da Hotmart com instruções para acessar a sua compra.</div>
       </details>
     </div>
   </div>
@@ -1022,7 +1038,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="btn" href="#oferta">Quero descobrir o Código do Carisma</a>
     </div>
     <div class="microcopy">
-      <span>R$ 19,90</span>
+      
       <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pagamento único</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>7 dias de garantia</span>
     </div>
