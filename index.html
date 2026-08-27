@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Código do Carisma — Aprenda a Conversar com Mais Naturalidade</title>
+<meta name="description" content="Descubra como perceber ganchos de conversa e encontrar novas direções para conversas que travam, sem frases decoradas ou precisar ser extrovertido.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101828;
+    --navy-deep:#0b111d;
+    --ivory:#F7F4ED;
+    --gold:#D6A84F;
+    --gold-soft:#E7C77E;
+    --slate:#344054;
+    --white:#FFFFFF;
+    --serif: 'Fraunces', serif;
+    --sans: 'Public Sans', sans-serif;
+    --max: 1120px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; overflow-x:hidden;}
+  body{
+    font-family:var(--sans);
+    color:var(--slate);
+    background:var(--ivory);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  .container{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 28px;
+  }
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before,.eyebrow::after{
+    content:'';
+    width:34px;
+    height:1px;
+    background:var(--gold);
+    opacity:.6;
+  }
+  .eyebrow.left{justify-content:flex-start;}
+  .eyebrow.left::after{display:none;}
+
+  h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  h1{font-size:clamp(38px,5vw,58px); line-height:1.08;}
+  h2{font-size:clamp(26px,3.4vw,38px); line-height:1.18;}
+  h3{font-size:19px; font-weight:600;}
+  p{font-size:16.5px;}
+  .lede{font-size:19px; color:var(--navy); font-weight:500;}
+  .muted{color:#6b7280;}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:var(--gold);
+    color:var(--navy);
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:.02em;
+    padding:18px 32px;
+    border-radius:3px;
+    box-shadow:0 10px 30px -12px rgba(214,168,79,.55);
+    transition:transform .25s ease, box-shadow .25s ease;
+    text-transform:uppercase;
+    font-size:13.5px;
+    letter-spacing:.08em;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 14px 34px -10px rgba(214,168,79,.65);}
+  .btn-wrap{display:flex; justify-content:center; margin:36px 0 18px;}
+  .btn-wrap.left{justify-content:flex-start;}
+
+  .microcopy{
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+    justify-content:center;
+    font-size:13px;
+    color:#98a2b3;
+    letter-spacing:.02em;
+  }
+  .microcopy.left{justify-content:flex-start;}
+  .microcopy span{display:flex; align-items:center; gap:7px;}
+  .microcopy svg{width:14px; height:14px; stroke:var(--gold);}
+
+  /* ============ HERO ============ */
+  .hero{
+    background:radial-gradient(1100px 500px at 85% -10%, rgba(214,168,79,.10), transparent),
+               var(--navy);
+    color:var(--white);
+    padding:78px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'';
+    position:absolute;
+    top:-120px; right:-120px;
+    width:340px; height:340px;
+    border:1px solid rgba(214,168,79,.18);
+    border-radius:50%;
+  }
+  .hero::after{
+    content:'';
+    position:absolute;
+    bottom:-160px; left:-100px;
+    width:280px; height:280px;
+    border:1px solid rgba(214,168,79,.12);
+    border-radius:50%;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:minmax(300px,420px) 1fr;
+    gap:64px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .hero h1{color:var(--white);}
+  .hero h1 .gold{color:var(--gold);}
+  .hero-sub{
+    font-size:19px;
+    color:#D7DCE5;
+    margin:20px 0 26px;
+    max-width:520px;
+  }
+  .hero-body p{color:#B9C0CC; margin-bottom:10px; font-size:16px;}
+  .hero-highlight{
+    color:var(--gold-soft);
+    font-weight:600;
+    font-size:16.5px;
+    margin-top:16px;
+    display:block;
+    max-width:540px;
+  }
+
+  /* Product image */
+  .book-wrap{position:relative;}
+  .product-hero{
+    width:100%;
+    height:auto;
+    max-height:560px;
+    object-fit:contain;
+    filter:drop-shadow(-18px 26px 28px rgba(0,0,0,.42));
+  }
+
+  /* ============ CINEMATIC IDENTIFICATION ============ */
+  .cinematic{max-width:700px; margin:0 auto; text-align:center;}
+  .cinematic h2{margin-bottom:4px;}
+  .cinematic .now{
+    font-family:var(--serif);
+    font-size:clamp(44px,8vw,78px);
+    color:var(--gold);
+    line-height:1;
+    margin:12px 0 34px;
+  }
+  .cinematic-lines{display:grid; gap:8px; color:var(--slate);}
+  .cinematic-lines .pause{margin-top:18px; color:var(--navy); font-weight:600;}
+  .cinematic-close{
+    max-width:650px;
+    margin:34px auto 0;
+    padding-top:28px;
+    border-top:1px solid rgba(16,24,40,.12);
+  }
+  .cinematic-close strong{color:#9B7128;}
+
+  /* ============ CURIOSITY LOOP ============ */
+  .curiosity{max-width:760px; margin:0 auto; text-align:center;}
+  .curiosity .not-list{margin:28px 0; display:grid; gap:7px; color:#B9C0CC;}
+  .curiosity .reveal{
+    display:inline-block;
+    margin-top:22px;
+    padding:16px 22px;
+    border:1px solid rgba(214,168,79,.42);
+    color:var(--gold-soft);
+    font-family:var(--serif);
+    font-size:clamp(21px,3vw,29px);
+  }
+
+  /* ============ SECTION SHELLS ============ */
+  section{padding:76px 0;}
+  .bg-ivory{background:var(--ivory);}
+  .bg-navy{background:var(--navy); color:var(--white);}
+  .bg-navy h2{color:var(--white);}
+  .bg-navy .muted{color:#9BA4B4;}
+  .center{text-align:center;}
+  .section-head{max-width:680px; margin:0 auto 48px; text-align:center;}
+  .section-head p{margin-top:12px; font-size:17px;}
+  .bg-navy .section-head p{color:#AEB6C4;}
+
+  /* ============ IDENTIFICATION ============ */
+  .flow-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0;
+    flex-wrap:wrap;
+    margin-bottom:44px;
+  }
+  .flow-step{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    width:140px;
+  }
+  .flow-icon{
+    width:56px; height:56px;
+    border-radius:50%;
+    border:1px solid rgba(16,24,40,.15);
+    background:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:12px;
+  }
+  .flow-icon svg{width:22px; height:22px; stroke:var(--navy); fill:none; stroke-width:1.6;}
+  .flow-step p{font-size:13.5px; color:var(--slate); line-height:1.4;}
+  .flow-connector{
+    width:46px; height:1px;
+    background:repeating-linear-gradient(90deg, var(--gold) 0 5px, transparent 5px 9px);
+    margin:0 4px 30px;
+  }
+  .identify-note{
+    max-width:640px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .identify-note p{margin-bottom:10px; color:var(--slate);}
+  .identify-note .gold-text{color:#B5872F; font-weight:600;}
+
+  /* ============ BELIEF BREAK ============ */
+  .belief{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:start;
+  }
+  .belief-list{
+    font-family:var(--serif);
+    font-size:22px;
+    color:var(--navy);
+    line-height:1.7;
+  }
+  .belief-copy p{margin-bottom:14px;}
+  .belief-copy strong{color:var(--navy);}
+  .belief-final{
+    font-family:var(--serif);
+    font-size:22px;
+    color:var(--navy);
+    margin-top:18px;
+    border-left:2px solid var(--gold);
+    padding-left:18px;
+  }
+
+  /* ============ CONCEPT / 4 MOVES ============ */
+  .moves{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+    margin:44px 0 46px;
+  }
+  .move{
+    text-align:center;
+    padding:8px 10px;
+  }
+  .move .num-ring{
+    width:64px; height:64px;
+    border-radius:50%;
+    border:1px solid rgba(214,168,79,.4);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 16px;
+    position:relative;
+  }
+  .move .num-ring svg{width:24px; height:24px; stroke:var(--gold); fill:none; stroke-width:1.5;}
+  .move .num{
+    font-size:10.5px;
+    letter-spacing:.2em;
+    color:var(--gold);
+    display:block;
+    margin-bottom:8px;
+  }
+  .move h3{color:var(--white); font-size:16px; letter-spacing:.04em; margin-bottom:8px;}
+  .move p{color:#9BA4B4; font-size:14px;}
+  .move-path{
+    text-align:center;
+    font-family:var(--serif);
+    font-size:15px;
+    letter-spacing:.06em;
+    color:var(--gold-soft);
+    margin-bottom:14px;
+  }
+  .move-path .sep{color:#5b6474; margin:0 8px;}
+  .move-caption{
+    text-align:center;
+    color:#AEB6C4;
+    max-width:460px;
+    margin:0 auto;
+  }
+
+  /* ============ EXAMPLE ============ */
+  .example{
+    max-width:680px;
+    margin:0 auto;
+  }
+  .quote{
+    border-left:2px solid var(--gold);
+    padding:6px 0 6px 22px;
+    margin:20px 0;
+    font-family:var(--serif);
+    font-size:19px;
+    color:var(--navy);
+    font-style:italic;
+  }
+  .example .label{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:#98a2b3;
+    margin:26px 0 4px;
+  }
+  .example .detail-tag{
+    display:inline-block;
+    background:rgba(214,168,79,.14);
+    color:#8a651f;
+    font-weight:700;
+    padding:2px 8px;
+    border-radius:2px;
+  }
+  .example-close{
+    margin-top:30px;
+    padding-top:24px;
+    border-top:1px solid rgba(16,24,40,.1);
+  }
+  .example-close p{margin-bottom:6px;}
+  .example-close strong{color:var(--navy);}
+
+  /* ============ WHAT'S INSIDE ============ */
+  .inside-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px 30px;
+    margin-bottom:40px;
+  }
+  .inside-card{
+    background:var(--white);
+    border:1px solid rgba(16,24,40,.08);
+    padding:26px 24px;
+    border-radius:2px;
+  }
+  .inside-card .icon{
+    width:38px; height:38px;
+    margin-bottom:16px;
+  }
+  .inside-card .icon svg{width:100%; height:100%; stroke:var(--navy); fill:none; stroke-width:1.4;}
+  .inside-card h3{margin-bottom:8px; font-size:16.5px;}
+  .inside-card p{font-size:14.5px; color:#5b6474;}
+  .inside-card:last-child{grid-column:2 / 3;}
+  .inside-intro{max-width:700px; margin:-22px auto 38px; text-align:center; color:#5b6474;}
+  .challenge-box{
+    background:var(--navy);
+    color:var(--white);
+    border-radius:2px;
+    padding:30px 34px;
+    display:flex;
+    align-items:center;
+    gap:24px;
+  }
+  .challenge-box .icon{
+    width:44px; height:44px; flex:0 0 auto;
+  }
+  .challenge-box .icon svg{width:100%; height:100%; stroke:var(--gold); fill:none; stroke-width:1.4;}
+  .challenge-box h3{color:var(--white); margin-bottom:4px;}
+  .challenge-box p{color:#B9C0CC; font-size:14.5px;}
+
+  /* ============ FOR WHOM ============ */
+  .whom-list{
+    max-width:640px;
+    margin:0 auto 8px;
+  }
+  .whom-item{
+    display:flex;
+    gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(16,24,40,.08);
+  }
+  .whom-item:first-child{border-top:1px solid rgba(16,24,40,.08);}
+  .whom-item .mark{color:var(--gold); font-family:var(--serif); font-size:20px; line-height:1.4;}
+  .whom-item p{color:var(--slate); font-size:16px;}
+  .whom-final{
+    max-width:640px;
+    margin:26px auto 0;
+    text-align:center;
+  }
+  .whom-final p{margin-bottom:4px;}
+  .whom-final strong{color:var(--navy);}
+
+  /* ============ DIFFERENTIATION ============ */
+  .different{max-width:720px; margin:0 auto; text-align:center;}
+  .different p{margin:8px 0;}
+  .different .final{
+    font-family:var(--serif);
+    font-size:23px;
+    color:var(--navy);
+    margin-top:24px;
+  }
+
+  /* ============ BONUS ============ */
+  .bonus-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+  }
+  .bonus-item{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:28px;
+    align-items:center;
+  }
+  .bonus-cover{
+    width:100%;
+    height:auto;
+    max-height:330px;
+    object-fit:contain;
+    filter:drop-shadow(-10px 18px 22px rgba(0,0,0,.36));
+  }
+  .bonus-copy .tag{
+    font-size:11.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:block;
+    margin-bottom:8px;
+  }
+  .bonus-copy h3{color:var(--white); font-size:19px; margin-bottom:10px;}
+  .bonus-copy p{color:#AEB6C4; font-size:15px; margin-bottom:6px;}
+  .contexts{display:flex; flex-wrap:wrap; gap:7px; margin-top:14px;}
+  .contexts span{font-size:10px; letter-spacing:.08em; border:1px solid rgba(214,168,79,.28); padding:5px 7px; color:#C8CED8;}
+  .bonus-message{margin:48px auto 0; text-align:center; color:var(--gold-soft); font-family:var(--serif); font-size:21px;}
+
+  /* ============ OFFER ============ */
+  .offer-box{
+    background:var(--white);
+    border:1px solid rgba(16,24,40,.1);
+    border-top:3px solid var(--gold);
+    border-radius:2px;
+    max-width:760px;
+    margin:0 auto;
+    padding:44px 48px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:40px;
+    align-items:center;
+  }
+  .offer-tag{
+    font-size:11.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:#B5872F;
+    margin-bottom:6px;
+    display:block;
+  }
+  .offer-box h3{margin-bottom:14px; font-size:17px;}
+  .offer-includes{list-style:none; margin-bottom:20px;}
+  .offer-includes li{
+    font-size:14.5px;
+    color:var(--slate);
+    padding-left:16px;
+    position:relative;
+    margin-bottom:6px;
+  }
+  .offer-includes li::before{
+    content:'—';
+    position:absolute; left:0; color:var(--gold);
+  }
+  .price{
+    font-family:var(--serif);
+    font-size:44px;
+    color:var(--navy);
+    font-weight:600;
+  }
+  .price-note{font-size:13px; color:#98a2b3; margin-top:2px;}
+  .offer-conditions{
+    font-size:13.5px;
+    color:#6b7280;
+    margin-top:10px;
+    line-height:1.7;
+  }
+  .offer-cta{text-align:center;}
+
+  /* ============ GUARANTEE ============ */
+  .guarantee{
+    max-width:760px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:36px;
+    align-items:center;
+  }
+  .badge{
+    width:104px; height:104px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:var(--navy);
+  }
+  .badge svg{width:26px; height:26px; stroke:var(--gold); fill:none; stroke-width:1.4; margin-bottom:6px;}
+  .badge .n{font-family:var(--serif); font-size:20px; line-height:1;}
+  .badge .d{font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; margin-top:3px; color:#6b7280;}
+  .guarantee-copy p{margin-bottom:8px;}
+  .guarantee-copy .steps{
+    display:flex;
+    gap:18px;
+    margin:14px 0;
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--navy);
+    font-size:16px;
+  }
+
+  /* ============ FAQ ============ */
+  .faq{max-width:720px; margin:0 auto;}
+  .faq-item{
+    border-bottom:1px solid rgba(16,24,40,.1);
+  }
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:var(--serif);
+    font-size:17px;
+    color:var(--navy);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:'+';
+    font-family:var(--sans);
+    color:var(--gold);
+    font-size:22px;
+    font-weight:400;
+    transition:transform .2s ease;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item .a{padding:0 0 22px; font-size:15.5px; color:#5b6474; max-width:600px;}
+
+  /* ============ CLOSING ============ */
+  .closing{text-align:center; max-width:680px; margin:0 auto;}
+  .closing p{color:#B9C0CC; font-size:17px; margin-bottom:8px;}
+  .closing h2{color:var(--white); margin:22px 0 10px;}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--navy-deep);
+    color:#7C8598;
+    padding:40px 0 100px;
+    text-align:center;
+    font-size:13px;
+  }
+  footer .fname{
+    font-family:var(--serif);
+    color:var(--gold-soft);
+    font-size:16px;
+    margin-bottom:10px;
+  }
+  footer .path{
+    margin-top:16px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:11px;
+    color:#525b6b;
+  }
+  footer .legal{margin-top:14px; max-width:520px; margin-left:auto; margin-right:auto; color:#525b6b; font-size:12px; line-height:1.6;}
+
+  /* ============ STICKY MOBILE CTA ============ */
+  .sticky-cta{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    background:var(--navy);
+    border-top:1px solid rgba(214,168,79,.3);
+    padding:12px 18px;
+    display:none;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    z-index:50;
+    transform:translateY(100%);
+    transition:transform .35s ease;
+  }
+  .sticky-cta.show{transform:translateY(0);}
+  .sticky-cta .price-mini{color:var(--white); font-family:var(--serif); font-size:16px;}
+  .sticky-cta .price-mini small{display:block; color:#8a93a3; font-size:10.5px; font-family:var(--sans);}
+  .sticky-cta .btn{padding:12px 20px; font-size:12px;}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .book-wrap{max-width:360px; margin:0 auto; order:2;}
+    .hero-body{order:1; text-align:center;}
+    .hero-body .btn-wrap.left,.hero-body .microcopy.left{justify-content:center;}
+    .belief{grid-template-columns:1fr; gap:30px;}
+    .moves{grid-template-columns:1fr 1fr; gap:30px 20px;}
+    .inside-grid{grid-template-columns:1fr 1fr;}
+    .bonus-wrap{grid-template-columns:1fr; gap:40px;}
+    .offer-box{grid-template-columns:1fr; text-align:center; padding:36px 28px;}
+    .offer-cta{margin-top:10px;}
+    .offer-includes{text-align:left; display:inline-block;}
+    .guarantee{grid-template-columns:1fr; text-align:center; justify-items:center;}
+    .flow-row{gap:6px;}
+    .flow-connector{display:none;}
+  }
+  @media (max-width:600px){
+    section{padding:56px 0;}
+    .inside-grid{grid-template-columns:1fr;}
+    .inside-card:last-child{grid-column:auto;}
+    .moves{grid-template-columns:1fr 1fr;}
+    h1{font-size:34px;}
+    .sticky-cta{display:flex;}
+    body{padding-bottom:0;}
+    .hero{padding:52px 0 44px;}
+    .hero-sub{font-size:17px;}
+    .bonus-item{grid-template-columns:120px 1fr; gap:18px; align-items:start;}
+    .bonus-copy h3{font-size:17px;}
+    .bonus-copy p{font-size:14px;}
+    .offer-box{padding:32px 20px;}
+    .btn{width:100%; padding:16px 18px;}
+    .sticky-cta .btn{width:auto;}
+    .move-path{line-height:2;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="book-wrap">
+      <img class="product-hero" src="https://cdn.jsdelivr.net/gh/luisbr83/o-codigo-do-carisma@main/images/o-codigo-do-carisma.webp" alt="O Código do Carisma e seus materiais complementares" width="900" height="1200" fetchpriority="high" decoding="async">
+    </div>
+    <div class="hero-body">
+      <h1>O CÓDIGO<br>DO <span class="gold">CARISMA</span></h1>
+      <p class="hero-sub">Como transformar conversas que morrem em conversas que naturalmente continuam.</p>
+      <p>Você não precisa falar mais.</p>
+      <p>Não precisa ser a pessoa mais engraçada da sala.</p>
+      <p>E não precisa se tornar extrovertido.</p>
+      <span class="hero-highlight">Aprenda a perceber os pequenos detalhes escondidos no que alguém acabou de dizer, e descubra como usá-los para criar conversas mais naturais, interessantes e fáceis de conduzir.</span>
+      <div class="btn-wrap left">
+        <a class="btn" data-checkout href="#oferta">Quero descobrir o Código do Carisma</a>
+      </div>
+      <div class="microcopy left">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>Acesso imediato</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pagamento único</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>7 dias de garantia</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ IDENTIFICAÇÃO ============ -->
+<section class="bg-ivory">
+  <div class="container">
+    <div class="cinematic">
+      <h2>Você já viveu aquele momento:</h2>
+      <div class="now">“E agora?”</div>
+      <div class="cinematic-lines">
+        <p>Alguém fala alguma coisa.</p>
+        <p>Você responde.</p>
+        <p>A pessoa responde novamente.</p>
+        <p class="pause">E então acontece aquele pequeno silêncio.</p>
+        <p>Você tenta pensar em outro assunto.</p>
+        <p>Faz outra pergunta.</p>
+        <p>A conversa continua por alguns segundos...</p>
+        <p>e morre.</p>
+      </div>
+      <div class="cinematic-close">
+        <p>Enquanto isso, existem pessoas que parecem encontrar naturalmente um caminho para continuar.</p>
+        <p>Não necessariamente porque falam mais. Não necessariamente porque são mais engraçadas.</p>
+        <p style="margin-top:12px;"><strong>Elas parecem perceber alguma coisa que você ainda não aprendeu a perceber.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUEBRA DE CRENÇA ============ -->
+<section class="bg-white" style="background:var(--white);">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:44px;">
+      <h2>Talvez você não tenha um problema de carisma.</h2>
+      <p>Talvez você simplesmente não saiba onde a conversa pode ir.</p>
+    </div>
+
+    <div class="belief">
+      <div class="belief-copy">
+        <p>Quando pensamos em carisma, normalmente pensamos em confiança, presença, humor e facilidade para falar.</p>
+        <p>Mas uma parte importante do carisma acontece antes da próxima frase.</p>
+        <p><strong>Está na capacidade de perceber o que existe dentro daquilo que a outra pessoa acabou de dizer.</strong></p>
+      </div>
+      <div>
+        <div class="belief-list">
+          Uma experiência.<br>
+          Uma opinião.<br>
+          Uma emoção.<br>
+          Um detalhe.<br>
+          Uma história.<br>
+          Um pequeno gancho.
+        </div>
+        <div class="belief-final">Quando você aprende a reconhecer esses pontos, a conversa deixa de depender de “ter assunto”.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOOP DE CURIOSIDADE ============ -->
+<section class="bg-navy">
+  <div class="container curiosity">
+    <div class="eyebrow">Antes da próxima frase</div>
+    <h2>Existe um detalhe que pessoas naturalmente interessantes parecem perceber durante uma conversa.</h2>
+    <div class="not-list">
+      <p>Não é falar mais.</p>
+      <p>Não é contar histórias incríveis.</p>
+      <p>Não é decorar frases.</p>
+      <p>E não é fazer a outra pessoa rir o tempo todo.</p>
+    </div>
+    <p>É perceber pequenas oportunidades escondidas no que acabou de ser dito.</p>
+    <div class="reveal">Nós chamamos essas oportunidades de GANCHOS.</div>
+  </div>
+</section>
+
+<!-- ============ O CONCEITO ============ -->
+<section class="bg-navy" style="background:var(--navy-deep);">
+  <div class="container">
+    <div class="section-head">
+      <h2>O Código começa com quatro movimentos.</h2>
+      <p>Uma maneira prática de perceber onde uma conversa pode ganhar uma nova direção.</p>
+    </div>
+
+    <div class="moves">
+      <div class="move">
+        <span class="num">01</span>
+        <div class="num-ring"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="2.6"/></svg></div>
+        <h3>PERCEBER</h3>
+        <p>Identificar os detalhes que podem abrir uma nova direção.</p>
+      </div>
+      <div class="move">
+        <span class="num">02</span>
+        <div class="num-ring"><svg viewBox="0 0 24 24"><path d="M6 3v6a6 6 0 0 0 12 0V3"/><path d="M12 15v6"/></svg></div>
+        <h3>PUXAR</h3>
+        <p>Transformar um detalhe em uma possibilidade de conversa.</p>
+      </div>
+      <div class="move">
+        <span class="num">03</span>
+        <div class="num-ring"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+        <h3>APROFUNDAR</h3>
+        <p>Sair do superficial sem transformar a interação em interrogatório.</p>
+      </div>
+      <div class="move">
+        <span class="num">04</span>
+        <div class="num-ring"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="9" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 6-5s5 2 5 5"/></svg></div>
+        <h3>CONECTAR</h3>
+        <p>Adicionar sua própria perspectiva e transformar perguntas em troca.</p>
+      </div>
+    </div>
+
+    <div class="move-path">PERCEBER<span class="sep">→</span>PUXAR<span class="sep">→</span>APROFUNDAR<span class="sep">→</span>CONECTAR</div>
+    <p class="move-caption">Você não recebe um roteiro para decorar. Você aprende uma forma diferente de enxergar a conversa.</p>
+  </div>
+</section>
+
+<!-- ============ EXEMPLO ============ -->
+<section class="bg-ivory">
+  <div class="container">
+    <div class="section-head">
+      <h2>Você não precisa inventar assunto.</h2>
+      <p>Precisa aprender a enxergar o que já está na conversa.</p>
+    </div>
+    <div class="example">
+      <p>Imagine que alguém diga:</p>
+      <div class="quote">“Comecei a viajar sozinho no ano passado.”</div>
+
+      <p class="label">Resposta automática</p>
+      <div class="quote" style="font-size:17px;">“Legal. Para onde você foi?”</div>
+      <p>Funciona. Mas existe outra possibilidade.</p>
+
+      <p class="label">Você pode perceber o detalhe</p>
+      <p><span class="detail-tag">“sozinho”</span></p>
+
+      <p class="label">E perguntar</p>
+      <div class="quote">“O que te fez decidir viajar sozinho?”</div>
+
+      <div class="example-close">
+        <p>Agora existe espaço para uma experiência. Uma história. Uma opinião. Uma emoção.</p>
+        <p>Talvez até uma conexão com algo que você também viveu.</p>
+        <p style="margin-top:14px;"><strong>A diferença não está em decorar uma pergunta.</strong></p>
+        <p><strong>Está em perceber o detalhe.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O QUE VOCÊ VAI ENCONTRAR ============ -->
+<section class="bg-white" style="background:var(--white);">
+  <div class="container">
+    <div class="section-head">
+      <h2>Dentro de O Código do Carisma</h2>
+    </div>
+    <p class="inside-intro">Uma leitura prática, direta e de consumo rápido para entender como conversas ganham profundidade e como encontrar novas direções sem depender de frases decoradas.</p>
+
+    <div class="inside-grid">
+      <div class="inside-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v5h5"/></svg></div>
+        <h3>O princípio das conversas que continuam</h3>
+        <p>Entenda por que algumas conversas avançam naturalmente enquanto outras ficam presas em perguntas e respostas.</p>
+      </div>
+      <div class="inside-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Os pontos de gancho</h3>
+        <p>Aprenda a identificar detalhes que podem abrir novos caminhos dentro de uma conversa.</p>
+      </div>
+      <div class="inside-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>A arte de aprofundar</h3>
+        <p>Descubra como sair do superficial sem parecer invasivo ou transformar a conversa em entrevista.</p>
+      </div>
+      <div class="inside-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8"/></svg></div>
+        <h3>Perguntar + compartilhar</h3>
+        <p>Como transformar uma entrevista em uma conversa de verdade.</p>
+      </div>
+      <div class="inside-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 21v-3a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v3"/><circle cx="9" cy="7" r="3"/><path d="M17 21v-2a4 4 0 0 0-3-3.87"/><path d="M14 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Aplicação prática</h3>
+        <p>Exemplos para situações sociais e profissionais.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ISSO NÃO É ============ -->
+<section class="bg-ivory">
+  <div class="container">
+    <div class="different">
+      <div class="eyebrow">Uma diferença importante</div>
+      <h2>Você não precisa virar outra pessoa.</h2>
+      <p>O Código do Carisma não foi criado para transformar você em alguém que domina todas as conversas.</p>
+      <p>Não é um roteiro para decorar.</p>
+      <p>Não é uma coleção de frases mágicas.</p>
+      <p>Não é uma técnica para manipular pessoas.</p>
+      <p class="final">É uma forma diferente de enxergar uma conversa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BÔNUS ============ -->
+<section class="bg-navy">
+  <div class="container">
+    <div class="section-head">
+      <h2>Dois materiais para levar o princípio à prática</h2>
+    </div>
+
+    <div class="bonus-wrap">
+      <div class="bonus-item">
+        <img class="bonus-cover" src="https://cdn.jsdelivr.net/gh/luisbr83/o-codigo-do-carisma@main/images/banco-de-ganchos.webp" alt="Banco de Ganchos" width="700" height="980" loading="lazy" decoding="async">
+        <div class="bonus-copy">
+          <span class="tag">Material complementar</span>
+          <h3>BANCO DE GANCHOS</h3>
+          <p><strong style="color:var(--white);">O que procurar quando você não sabe como continuar uma conversa.</strong></p>
+          <p>Um guia de referência rápida para identificar diferentes tipos de ganchos dentro de uma conversa.</p>
+          <p style="margin-top:10px; color:var(--gold-soft);">Pare de procurar desesperadamente “o que falar”. Aprenda a identificar o que já foi dito.</p>
+        </div>
+      </div>
+
+      <div class="bonus-item">
+        <img class="bonus-cover" src="https://cdn.jsdelivr.net/gh/luisbr83/o-codigo-do-carisma@main/images/mapa-de-conversas.webp" alt="Mapa de Conversas" width="700" height="980" loading="lazy" decoding="async">
+        <div class="bonus-copy">
+          <span class="tag">Material complementar</span>
+          <h3>MAPA DE CONVERSAS</h3>
+          <p><strong style="color:var(--white);">Saiba como adaptar o Código do Carisma a diferentes situações.</strong></p>
+          <p>Um guia visual para entender onde você está, o que observar e para onde a conversa pode ir.</p>
+          <div class="contexts"><span>CONHECER ALGUÉM</span><span>ENCONTRO</span><span>NETWORKING</span><span>TRABALHO</span><span>EVENTOS E FESTAS</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="bonus-message">O livro explica o princípio.<br>Os materiais ajudam você a aplicar.</p>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section class="bg-ivory" id="oferta">
+  <div class="container">
+    <div class="section-head">
+      <h2>Comece a enxergar suas conversas de outra forma.</h2>
+    </div>
+
+    <div class="offer-box">
+      <div>
+        <span class="offer-tag">Acesso completo</span>
+        <h3>O Código do Carisma</h3>
+        <ul class="offer-includes">
+          <li>O Código do Carisma</li>
+          <li>Banco de Ganchos</li>
+          <li>Mapa das Conversas</li>
+        </ul>
+        <div class="price">R$ 19,90</div>
+        <div class="price-note">Pagamento único.</div>
+        <div class="offer-conditions">Sem mensalidade.<br>Sem assinatura.</div>
+      </div>
+      <div class="offer-cta">
+        <a class="btn" data-checkout href="#oferta">Quero acessar o Código do Carisma</a>
+        <div class="microcopy" style="margin-top:16px;">
+          <span>Acesso imediato após a confirmação do pagamento</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GARANTIA ============ -->
+<section style="background:var(--white); padding-top:56px;">
+  <div class="container">
+    <div class="guarantee">
+      <div class="badge">
+        <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>
+        <span class="n">7</span>
+        <span class="d">dias</span>
+      </div>
+      <div class="guarantee-copy">
+        <h2 style="margin-bottom:12px;">7 dias para conhecer sem assumir um risco desnecessário.</h2>
+        <div class="steps">Leia. Teste. Observe suas próximas conversas.</div>
+        <p>Se concluir que o conteúdo não é para você, poderá solicitar o reembolso dentro do prazo da garantia, conforme as condições da compra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="bg-ivory">
+  <div class="container">
+    <div class="section-head">
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>O que é O Código do Carisma?</summary>
+        <div class="a">É uma leitura prática sobre carisma conversacional: como perceber detalhes no que alguém diz e encontrar novas direções para a conversa. Acompanha dois materiais complementares.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso ser extrovertido?</summary>
+        <div class="a">Não. A proposta não é mudar sua personalidade, mas ajudar você a perceber melhor o que já está acontecendo durante uma conversa.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Vou precisar decorar frases?</summary>
+        <div class="a">Não. O foco está em reconhecer ganchos e compreender possibilidades, sem depender de roteiros ou respostas prontas.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo leva para consumir?</summary>
+        <div class="a">O conteúdo foi desenvolvido para ser direto e de consumo rápido, para que você possa avançar no seu ritmo e começar a observar suas conversas.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Como recebo o acesso?</summary>
+        <div class="a">Após a confirmação do pagamento, o acesso é disponibilizado conforme as instruções da compra.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FECHAMENTO ============ -->
+<section class="bg-navy">
+  <div class="container closing">
+    <h2>Talvez você nunca tenha precisado de mais assunto.</h2>
+    <p style="color:var(--gold-soft); font-family:var(--serif); font-size:21px; margin-bottom:24px;">Talvez precisasse apenas aprender a enxergar o que já estava ali.</p>
+    <p>Uma resposta pode esconder uma história.</p>
+    <p>Uma opinião pode abrir uma discussão.</p>
+    <p>Um detalhe pode criar identificação.</p>
+    <p>E uma conversa comum pode se tornar muito mais interessante.</p>
+    <h2 style="font-size:27px;">Esse é o Código do Carisma.</h2>
+    <div class="btn-wrap">
+      <a class="btn" data-checkout href="#oferta">Quero descobrir o Código do Carisma</a>
+    </div>
+    <div class="microcopy">
+      <span>R$ 19,90</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pagamento único</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>7 dias de garantia</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="fname">O Código do Carisma</div>
+    <div>© 2026 Todos os direitos reservados.</div>
+    <div class="legal">Resultados individuais podem variar. O conteúdo tem finalidade educacional e não garante resultados específicos.</div>
+    <div class="path">Perceber · Puxar · Aprofundar · Conectar</div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="price-mini">R$ 19,90<small>Pagamento único</small></div>
+  <a class="btn" data-checkout href="#oferta">Quero acessar</a>
+</div>
+
+<script>
+  const CHECKOUT_URL = "https://pay.hotmart.com/V107358473M";
+
+  document.querySelectorAll('[data-checkout]').forEach((button) => {
+    if (!CHECKOUT_URL.startsWith('COLE_AQUI')) {
+      button.href = CHECKOUT_URL;
+    } else {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+
+  const hero = document.querySelector('.hero');
+  const sticky = document.getElementById('stickyCta');
+  window.addEventListener('scroll', () => {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    if (heroBottom < 0) {
+      sticky.classList.add('show');
+    } else {
+      sticky.classList.remove('show');
+    }
+  }, { passive: true });
+</script>
+
+</body>
+</html>
